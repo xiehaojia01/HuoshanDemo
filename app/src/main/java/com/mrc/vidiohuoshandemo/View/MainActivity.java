@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,14 +17,16 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mrc.vidiohuoshandemo.Adapter.PagerAdapter.MyViewPagerAdapter;
-import com.mrc.vidiohuoshandemo.Fragment.LiveFragment;
-import com.mrc.vidiohuoshandemo.Fragment.Video_Fragment;
+import com.mrc.vidiohuoshandemo.model.LiveFragment;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
+import com.mrc.vidiohuoshandemo.activity.SearchActivity;
+import com.mrc.vidiohuoshandemo.common.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private ImageView mSousuo;
     private TabLayout mIndicator;
@@ -126,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
             case R.id.sousuo:
-                Intent intent_sousuo = new Intent(this,SousuoActivity.class);
+                Intent intent_sousuo = new Intent(this,SearchActivity.class);
                 startActivity(intent_sousuo);
                 break;
             case R.id.login_button:

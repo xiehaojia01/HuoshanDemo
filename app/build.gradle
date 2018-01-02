@@ -18,8 +18,10 @@ android {
     }
 }
 
+
+
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation 'junit:junit:4.12'
@@ -27,4 +29,28 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     compile 'com.android.support:design:26.1.0'
     compile 'com.hjm:BottomTabBar:1.1.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    //图片加载
+    compile 'com.facebook.fresco:fresco:1.7.1'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.7.1'
+    //RxJava
+//    compile 'io.reactivex:rxandroid:1.1.0'
+//    compile 'io.reactivex:rxjava:1.0.14'
+//    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.7'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    //动态URL
+    compile 'me.jessyan:retrofit-url-manager:1.1.0'
+    //日志拦截器
+    compile('com.github.ihsanbal:LoggingInterceptor:2.0.3') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile 'com.github.hackware1993:MagicIndicator:1.5.0'
+    //网路请求
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.zhy:autolayout:1.4.5'
 }

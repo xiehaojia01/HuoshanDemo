@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,15 +10,14 @@ import android.view.ViewGroup;
 import com.mrc.vidiohuoshandemo.R;
 
 /**
- * Created by Mr.c on 2017/12/28.
+ * Created by Mr.c on 2017/12/29.
  */
 
-public class TianjiaFragment extends Fragment {
-
+public class MessageTwo_fragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tianjia_fragment,null);
-        return super.onCreateView(inflater, container, savedInstanceState);
+        View view = inflater.inflate(R.layout.messagetwo_fragment,null);
+        return view;
     }
 }

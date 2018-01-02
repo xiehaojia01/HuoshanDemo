@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -16,7 +16,7 @@ import com.mrc.vidiohuoshandemo.R;
  * Created by Mr.c on 2017/12/28.
  */
 
-public class MedeFragment extends Fragment implements View.OnClickListener {
+public class MineFragment extends Fragment implements View.OnClickListener {
 
     private View view;
     private ImageView mYaoqing;
@@ -31,7 +31,7 @@ public class MedeFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.wode_fragment, null);
+        view = inflater.inflate(R.layout.mine_fragment, null);
         initView(view);
         return view;
     }

@@ -1,16 +1,31 @@
 package com.mrc.vidiohuoshandemo.App;
 
 import android.app.Application;
+import android.content.Context;
+
+import com.facebook.drawee.backends.pipeline.Fresco;
+
+import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
+
+import static com.mrc.vidiohuoshandemo.api.HsConstants.APP_HUOSHAN_DOMAIN;
+import static com.mrc.vidiohuoshandemo.api.HsConstants.HUOSHAN_DOMAIN_NAME;
 
 /**
- * Created by Mr.c on 2017/12/27.
+ * Created by 杨群 on 2017/12/29.
  */
 
-public class APP extends Application {
+public class App extends Application{
+    public static App app;
+
+    public static Context getAppContext() {
+        return app;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-
+        app=this;
+        RetrofitUrlManager.getInstance().putDomain(HUOSHAN_DOMAIN_NAME, APP_HUOSHAN_DOMAIN);
+        Fresco.initialize(this);
     }
 }

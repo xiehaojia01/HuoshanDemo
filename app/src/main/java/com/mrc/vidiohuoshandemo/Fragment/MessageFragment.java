@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -19,7 +19,7 @@ import java.util.List;
  * Created by Mr.c on 2017/12/28.
  */
 
-public class XiaoxiFragment extends Fragment {
+public class MessageFragment extends Fragment {
 
     private View view;
     private TabLayout mIndicator2;
@@ -31,7 +31,7 @@ public class XiaoxiFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.xiaoxi_fragment, null);
+        view = inflater.inflate(R.layout.message_fragment, null);
     //初始化控件
     initView();
     //添加标题
@@ -58,8 +58,8 @@ public class XiaoxiFragment extends Fragment {
 
     private void initFragment() {
         mFragmentList = new ArrayList<>();
-        mFragmentList.add(new Bagua_fragment());
-        mFragmentList.add(new Xiaoxi2_fragment());
+        mFragmentList.add(new Gossip_fragment());
+        mFragmentList.add(new MessageTwo_fragment());
     }
 
     private void initView() {

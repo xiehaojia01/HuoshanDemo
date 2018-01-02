@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,9 +12,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.mrc.vidiohuoshandemo.Adapter.PagerAdapter.MyViewPagerAdapter;
-import com.mrc.vidiohuoshandemo.Fragment.LiveFragment;
-import com.mrc.vidiohuoshandemo.Fragment.Video_Fragment;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
+import com.mrc.vidiohuoshandemo.activity.SearchActivity;
+import com.mrc.vidiohuoshandemo.model.LiveFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
  * Created by Mr.c on 2017/12/28.
  */
 
-public class ShouyeFragment extends Fragment implements View.OnClickListener {
+public class HomePageFragment extends Fragment implements View.OnClickListener {
     private TabLayout mIndicator;
     /**
      * 登录/注册
@@ -38,7 +39,7 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.shouye_fragment, null);
+        view = inflater.inflate(R.layout.homepage_fragment, null);
         //初始化控件
         initView();
         //添加标题
@@ -70,7 +71,7 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener {
         mFragmentList = new ArrayList<>();
         mFragmentList.add(new LiveFragment());
         mFragmentList.add(new Video_Fragment());
-        mFragmentList.add(new Tongcheng_fragment());
+        mFragmentList.add(new TheSameCity_fragment());
     }
 
     private void initView() {
@@ -88,7 +89,7 @@ public class ShouyeFragment extends Fragment implements View.OnClickListener {
             default:
                 break;
             case R.id.sousuo1:
-                Intent intent_sousuo = new Intent(getContext(), SousuoActivity.class);
+                Intent intent_sousuo = new Intent(getContext(), SearchActivity.class);
                 startActivity(intent_sousuo);
                 break;
             case R.id.xinxi:

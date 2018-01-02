@@ -2,8 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mrc.vidiohuoshandemo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
-        android:name=".App.APP"
+        android:name=".App.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,9 +19,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".View.StateActivity" />
+
+        <meta-data
+            android:name="design_width"
+            android:value="768" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity android:name=".activity.StateActivity" />
         <activity android:name=".View.Main2Activity" />
-        <activity android:name=".View.SousuoActivity"></activity>
+        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".activity.PlayVideoActivity"></activity>
     </application>
 
 </manifest>

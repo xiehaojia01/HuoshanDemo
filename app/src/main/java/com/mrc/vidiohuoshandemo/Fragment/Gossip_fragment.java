@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,13 @@ import com.mrc.vidiohuoshandemo.R;
 /**
  * Created by Mr.c on 2017/12/29.
  */
-
-public class Xiaoxi2_fragment extends Fragment{
+//八卦的fragmentment
+public class Gossip_fragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.xiaoxi2_fragment,null);
+        View view = inflater.inflate(R.layout.gossip_fragment,null);
+
         return view;
     }
 }

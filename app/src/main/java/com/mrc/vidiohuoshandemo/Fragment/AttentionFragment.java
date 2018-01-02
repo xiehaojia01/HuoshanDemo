@@ -1,4 +1,4 @@
-package com.mrc.vidiohuoshandemo.View;
+package com.mrc.vidiohuoshandemo.Fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,8 +13,8 @@ import com.mrc.vidiohuoshandemo.R;
 /**
  * Created by Mr.c on 2017/12/28.
  */
-
-public class GuanzhuFragment extends Fragment {
+//关注的fragment
+public class AttentionFragment extends Fragment {
 
     private View view;
     private RecyclerView mRecyclerView;
@@ -22,7 +22,7 @@ public class GuanzhuFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.guanzhu_fragment, null);
+        view = inflater.inflate(R.layout.attention_fragment, null);
 
         initView(view);
         return view;
