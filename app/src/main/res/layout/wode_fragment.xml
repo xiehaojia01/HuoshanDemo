@@ -19,12 +19,14 @@
             android:src="@mipmap/wodetitle_03"/>
         <TextView
             android:id="@+id/wode_titlename"
+            android:textSize="18dp"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textColor="@android:color/black"
-            android:text="关注" />
+            android:text="帐户名" />
         <ImageView
             android:id="@+id/fenxing"
             android:layout_alignParentRight="true"
