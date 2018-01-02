@@ -17,8 +17,11 @@ android {
         }
     }
 }
-
-
+repositories {
+    flatDir {
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -54,4 +57,6 @@ dependencies {
     compile 'com.github.leifzhang:IjkLib:0.4.4'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.zhy:autolayout:1.4.5'
+    compile 'org.greenrobot:eventbus:3.1.1'
+
 }

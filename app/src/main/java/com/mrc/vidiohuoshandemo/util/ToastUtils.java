@@ -4,7 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.mrc.vidiohuoshandemo.App.App;
+import com.mrc.vidiohuoshandemo.App.APP;
 import com.mrc.vidiohuoshandemo.BuildConfig;
 
 /**
@@ -13,7 +13,7 @@ import com.mrc.vidiohuoshandemo.BuildConfig;
 
 public class ToastUtils {
 
-    private static Context context = App.getAppContext();
+    private static Context context = APP.getAppContext();
     private static Toast toast;
 
     public static void show(int resId) {
