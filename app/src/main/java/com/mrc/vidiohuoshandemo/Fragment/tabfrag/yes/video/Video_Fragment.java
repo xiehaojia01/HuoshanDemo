@@ -1,5 +1,6 @@
 package com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video;
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.mrc.vidiohuoshandemo.R;
+import com.mrc.vidiohuoshandemo.activity.PlayVideoActivity;
 
 import java.util.List;
 
@@ -53,7 +55,8 @@ public class Video_Fragment extends Fragment implements Video_view{
             public void onItemClick(View view, int position) {
                 Toast.makeText(getActivity(), ""+position, Toast.LENGTH_SHORT).show();
                 String s = videoBean.getData().get(position).getData().getVideo().getDownload_url().get(0);
-//                startActivity(new Intent(getActivity(),PlayActivity.class).putExtra("pull",s));
+                startActivity(new Intent(getActivity(),PlayVideoActivity.class).putExtra("pull",s));
+
             }
         });
     }

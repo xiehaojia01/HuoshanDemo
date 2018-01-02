@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.mrc.vidiohuoshandemo.Adapter.PagerAdapter.MyViewPagerAdapter;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.thesamecity.TheSameCity_fragment;
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.SearchActivity;

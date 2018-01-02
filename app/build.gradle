@@ -50,7 +50,8 @@ dependencies {
     compile 'com.github.hackware1993:MagicIndicator:1.5.0'
     //网路请求
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
-
+    //ijkPlayer
+    compile 'com.github.leifzhang:IjkLib:0.4.4'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.zhy:autolayout:1.4.5'
 }

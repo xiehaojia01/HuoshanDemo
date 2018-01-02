@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="300dp"
+    >
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv"
+        android:layout_width="match_parent"
+        android:layout_height="350dp" />
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/videoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_c"
+            android:text="视频名称"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sdv_below"
+                android:layout_width="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="15dp"
+                app:roundAsCircle="true"
+                />
+            <TextView
+                android:id="@+id/name"
+                android:layout_gravity="center"
+                android:textColor="@color/white_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="昵称"
+
+                />
+            <TextView
+                android:id="@+id/liuyan"
+                android:layout_marginLeft="100dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white_c"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/b_ll"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sdv"
+        android:background="@color/white_c"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"></LinearLayout>
+
+</RelativeLayout>
+
+
