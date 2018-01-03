@@ -44,8 +44,8 @@
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value=""></meta-data>
-
+            android:value="" >
+        </meta-data>
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -75,6 +75,15 @@
             android:excludeFromRecents="true"
             android:theme="@style/Theme.UMDefault" />
         <activity android:name=".activity.SameCityPlayVideoActivity"></activity>
+            android:theme="@style/Theme.UMDefault" />
+        <activity android:name=".activity.PhoneLogin_Activity"></activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <meta-data android:name="Mob-AppKey" android:value="101732155b605"/>
+        <meta-data android:name="Mob-AppSecret" android:value="69d1850f4b74100266ab576b64e6cb16"/>
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +23,7 @@ import com.mrc.vidiohuoshandemo.Adapter.PagerAdapter.MyViewPagerAdapter;
 import com.mrc.vidiohuoshandemo.App.APP;
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
+import com.mrc.vidiohuoshandemo.activity.PhoneLogin_Activity;
 import com.mrc.vidiohuoshandemo.activity.SearchActivity;
 import com.mrc.vidiohuoshandemo.common.BaseActivity;
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live.LiveFragment;
@@ -54,6 +57,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ImageView qq;
     private ImageView sina;
     private ImageView weixin;
+    private LinearLayout mLayouHide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +100,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mSousuo.setOnClickListener(this);
         mLoginButton.setOnClickListener(this);
     }
+
     UMAuthListener authListener = new UMAuthListener() {
         /**
          * @desc 授权开始的回调
@@ -151,11 +156,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         //初始化控件
         edit_phone = (EditText) inflate.findViewById(R.id.edit_phone);
         next_jump = (Button) inflate.findViewById(R.id.next_jump);
-        guanbi =(ImageView) inflate.findViewById(R.id.turnoff);
+        guanbi = (ImageView) inflate.findViewById(R.id.turnoff);
         qq = (ImageView) inflate.findViewById(R.id.QQ_Login);
         sina = (ImageView) inflate.findViewById(R.id.sina_Login);
         weixin = (ImageView) inflate.findViewById(R.id.wechat_Login);
+        mLayouHide = (LinearLayout) inflate.findViewById(R.id.layou_hide);
         guanbi.setOnClickListener(this);
+        edit_phone.setOnClickListener(this);
         next_jump.setOnClickListener(this);
         qq.setOnClickListener(this);
         sina.setOnClickListener(this);
@@ -191,29 +198,95 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             default:
                 break;
             case R.id.sousuo:
-                Intent intent_sousuo = new Intent(this,SearchActivity.class);
+                Intent intent_sousuo = new Intent(this, SearchActivity.class);
                 startActivity(intent_sousuo);
                 break;
             case R.id.login_button:
                 show(inflate);
                 break;
+            case R.id.edit_phone:
+                Checkout_phoneleght();
+            break;
             case R.id.turnoff:
                 hide();
                 break;
             case R.id.QQ_Login:
                 UMShareAPI.get(this).getPlatformInfo(this, SHARE_MEDIA.QQ, authListener);
-            break;
+                break;
             case R.id.wechat_Login:
                 UMShareAPI.get(APP.getAppContext()).getPlatformInfo(this, SHARE_MEDIA.WEIXIN, authListener);
                 break;
             case R.id.sina_Login:
                 UMShareAPI.get(APP.getAppContext()).getPlatformInfo(this, SHARE_MEDIA.SINA, authListener);
-            break;
+                break;
             case R.id.next_jump:
-                Intent intent_inlogin = new Intent(this,Main2Activity.class);
-                startActivity(intent_inlogin);
+                Checkout_phone();
                 break;
         }
+    }
 
+    private void Checkout_phoneleght() {
+        String phoneNums=edit_phone.getText().toString();
+        if (phoneNums.length() <= 1 && phoneNums == "") {
+            return;
+        } else {
+            mLayouHide.setVisibility(View.GONE);
+            next_jump.setVisibility(View.VISIBLE);
+        }
+    }
+
+    private void Checkout_phone() {
+        String phoneNums = edit_phone.getText().toString();
+        if (judgePhoneNums(phoneNums) == true) {
+            Intent intent = new Intent(this, PhoneLogin_Activity.class);
+            intent.putExtra("name",phoneNums);
+            startActivity(intent);
+        }
+    }
+
+
+    /**
+     * 判断手机号码是否合理
+     *
+     * @param phoneNums
+     */
+    private boolean judgePhoneNums(String phoneNums) {
+        if (isMatchLength(phoneNums, 11)
+                && isMobileNO(phoneNums)) {
+            return true;
+        }
+        Toast.makeText(this, "手机号码输入有误！", Toast.LENGTH_SHORT).show();
+        return false;
+    }
+
+    /**
+     * 判断一个字符串的位数
+     *
+     * @param str
+     * @param length
+     * @return
+     */
+    public static boolean isMatchLength(String str, int length) {
+        if (str.isEmpty()) {
+            return false;
+        } else {
+            return str.length() == length ? true : false;
+        }
+    }
+
+    /**
+     * 验证手机格式
+     */
+    public static boolean isMobileNO(String mobileNums) {
+        /*
+         * 移动：134、135、136、137、138、139、150、151、157(TD)、158、159、187、188
+         * 联通：130、131、132、152、155、156、185、186 电信：133、153、180、189、（1349卫通）
+         * 总结起来就是第一位必定为1，第二位必定为3或5或8，其他位置的可以为0-9
+         */
+        String telRegex = "[1][358]\\d{9}";// "[1]"代表第1位为数字1，"[358]"代表第二位可以为3、5、8中的一个，"\\d{9}"代表后面是可以是0～9的数字，有9位。
+        if (TextUtils.isEmpty(mobileNums))
+            return false;
+        else
+            return mobileNums.matches(telRegex);
     }
 }
