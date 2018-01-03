@@ -5,8 +5,8 @@
     android:orientation="vertical">
 
     <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/sdv"
-        android:layout_width="250dp"
-        android:layout_height="250dp" />
+        android:id="@+id/sdvs"
+        android:layout_width="400dp"
+        android:layout_height="400dp" />
 
 </LinearLayout>

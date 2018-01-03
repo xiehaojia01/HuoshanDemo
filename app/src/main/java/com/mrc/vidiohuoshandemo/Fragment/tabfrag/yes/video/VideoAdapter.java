@@ -44,7 +44,7 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
    MyViewHodler viewHodler= (MyViewHodler) holder;
    String s=list.get(position).getData().getAuthor().getAvatar_jpg().getUrl_list().get(0);
         Log.e("1111111111",s);
-   viewHodler.sdv.setImageURI(s);
+     viewHodler.sdv.setImageURI(s);
    holder.itemView.setTag(position);
     }
 
@@ -58,7 +58,8 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
         public MyViewHodler(View itemView) {
             super(itemView);
-            sdv = itemView.findViewById(R.id.sdv);
+            sdv = itemView.findViewById(R.id.sdvs);
+
         }
     }
     public interface  OnItemClickListener {
