@@ -63,4 +63,6 @@ dependencies {
     compile name: 'SMSSDKGUI-3.0.0', ext: 'aar'
     implementation files('libs/MobCommons-2017.0607.1736.jar')
     implementation files('libs/MobTools-2017.0607.1736.jar')
+    compile 'com.youth.banner:banner:1.4.9'
+
 }

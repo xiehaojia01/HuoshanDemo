@@ -28,7 +28,7 @@ import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.PhoneLogin_Activity;
 import com.mrc.vidiohuoshandemo.activity.SearchActivity;
 import com.mrc.vidiohuoshandemo.common.BaseActivity;
-import com.mrc.vidiohuoshandemo.model.LiveFragment;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live.LiveFragment;
 import com.mrc.vidiohuoshandemo.util.FirstEvent;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
@@ -82,7 +82,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private void initTitile() {
         mTitleList = new ArrayList<>();
-        mTitleList.add("直播");
+       mTitleList.add("直播");
         mTitleList.add("视频");
         //设置tablayout模式
         mIndicator.setTabMode(TabLayout.MODE_FIXED);

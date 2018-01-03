@@ -16,7 +16,7 @@ import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.thesamecity.TheSameCity_fra
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.SearchActivity;
-import com.mrc.vidiohuoshandemo.model.LiveFragment;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live.LiveFragment;
 
 import java.util.ArrayList;
 import java.util.List;
