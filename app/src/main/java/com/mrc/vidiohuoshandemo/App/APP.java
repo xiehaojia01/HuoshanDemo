@@ -4,7 +4,10 @@ import android.app.Application;
 import android.content.Context;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
+import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.common.QueuedWork;
 
 import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 
@@ -33,6 +36,9 @@ public class APP extends Application{
         context = this;
         RetrofitUrlManager.getInstance().putDomain(HUOSHAN_DOMAIN_NAME, APP_HUOSHAN_DOMAIN);
         Fresco.initialize(this);
+        Config.DEBUG = true;
+        QueuedWork.isUseThreadPool = false;
+        UMShareAPI.get(this);
     }
 
     public static Context AppContext() {

@@ -1,7 +1,9 @@
 package com.mrc.vidiohuoshandemo.View;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -58,6 +60,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private ImageView sina;
     private ImageView weixin;
     private LinearLayout mLayouHide;
+    private SharedPreferences login;
+    private SharedPreferences.Editor islogin;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +126,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             Toast.makeText(MainActivity.this, "登录成功", Toast.LENGTH_LONG).show();
             String iconurl = data.get("iconurl");
             String name = data.get("name");
+            login = getSharedPreferences("counter", Context.MODE_PRIVATE);
+            islogin = login.edit();
+            islogin.putBoolean("islogin",true);
+            islogin.putString("iconurl",iconurl);
+            islogin.putString("name",name);
+            islogin.commit();
             //使用EventBus把值传给我的
+            Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+            startActivity(intent);
             EventBus.getDefault().post(new FirstEvent(iconurl, name));
             finish();
         }
@@ -147,6 +160,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             Toast.makeText(MainActivity.this, "取消了", Toast.LENGTH_LONG).show();
         }
     };
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+    }
 
 
     public void show(View view) {
@@ -212,15 +230,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.QQ_Login:
                 UMShareAPI.get(this).getPlatformInfo(this, SHARE_MEDIA.QQ, authListener);
+                hide();
                 break;
             case R.id.wechat_Login:
                 UMShareAPI.get(APP.getAppContext()).getPlatformInfo(this, SHARE_MEDIA.WEIXIN, authListener);
+                hide();
                 break;
             case R.id.sina_Login:
                 UMShareAPI.get(APP.getAppContext()).getPlatformInfo(this, SHARE_MEDIA.SINA, authListener);
+                hide();
                 break;
             case R.id.next_jump:
                 Checkout_phone();
+                hide();
                 break;
         }
     }

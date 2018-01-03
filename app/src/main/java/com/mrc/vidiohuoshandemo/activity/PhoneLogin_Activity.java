@@ -1,6 +1,8 @@
 package com.mrc.vidiohuoshandemo.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -39,6 +41,8 @@ public class PhoneLogin_Activity extends AppCompatActivity implements View.OnCli
     // 注册按钮
     private Button commitBtn;
 
+    private SharedPreferences login;
+    private SharedPreferences.Editor islogin;
     //
     int i = 30;
 
@@ -143,9 +147,16 @@ public class PhoneLogin_Activity extends AppCompatActivity implements View.OnCli
                     if (event == SMSSDK.EVENT_SUBMIT_VERIFICATION_CODE) {// 提交验证码成功
                         Toast.makeText(getApplicationContext(), "提交验证码成功",
                                 Toast.LENGTH_SHORT).show();
+                        String name = inputPhoneEt.getText().toString();
+                        login = getSharedPreferences("counter", Context.MODE_PRIVATE);
+                        islogin = login.edit();
+                        islogin.putBoolean("islogin",true);
+                        islogin.putString("name",name);
+                        islogin.commit();
                         Intent intent = new Intent(PhoneLogin_Activity.this,
                                 Main2Activity.class);
                         startActivity(intent);
+                        finish();
                     } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                         Toast.makeText(getApplicationContext(), "正在获取验证码",
                                 Toast.LENGTH_SHORT).show();

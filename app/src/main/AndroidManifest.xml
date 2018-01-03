@@ -22,7 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.MainActivity">
+        <activity android:name=".activity.StateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +37,7 @@
             android:name="design_height"
             android:value="1280" />
 
-        <activity android:name=".activity.StateActivity" />
+        <activity android:name=".View.MainActivity" />
         <activity android:name=".View.Main2Activity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.PlayVideoActivity"></activity>
