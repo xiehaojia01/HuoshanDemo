@@ -13,7 +13,7 @@ import com.mrc.vidiohuoshandemo.BuildConfig;
 
 public class ToastUtils {
 
-    private static Context context = APP.getAppContext();
+    private static Context context= APP.getAppContext();
     private static Toast toast;
 
     public static void show(int resId) {

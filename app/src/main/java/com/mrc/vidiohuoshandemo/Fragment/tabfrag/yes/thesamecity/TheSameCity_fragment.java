@@ -1,6 +1,7 @@
 package com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.thesamecity;
 
 
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.VideoAdapter;
 import com.mrc.vidiohuoshandemo.R;
+import com.mrc.vidiohuoshandemo.activity.SameCityPlayVideoActivity;
 
 import java.util.List;
 
@@ -58,7 +60,7 @@ public class TheSameCity_fragment extends Fragment implements SameCity_view {
             public void onItemClick(View view, int position) {
                 Toast.makeText(getActivity(), ""+position, Toast.LENGTH_SHORT).show();
                 String s = sameCityBean.getData().get(position).getData().getVideo().getDownload_url().get(0);
-                //startActivity(new Intent(getActivity(),PlayVideoActivity.class).putExtra("pull",s));
+                startActivity(new Intent(getActivity(),SameCityPlayVideoActivity.class).putExtra("pull",s));
 
             }
         });
