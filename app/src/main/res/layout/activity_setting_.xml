@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mrc.vidiohuoshandemo.activity.Setting_Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        android:layout_weight="0.5">
+    <ImageView
+        android:id="@+id/retutn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/back"/>
+    <TextView
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="@android:color/black"
+        android:text="设置" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_weight="9"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:text="退出登录"
+            android:background="#f6f6f6"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

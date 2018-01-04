@@ -129,7 +129,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             login = getSharedPreferences("counter", Context.MODE_PRIVATE);
             islogin = login.edit();
             islogin.putBoolean("islogin",true);
-            islogin.putString("iconurl",iconurl);
             islogin.putString("name",name);
             islogin.commit();
             //使用EventBus把值传给我的

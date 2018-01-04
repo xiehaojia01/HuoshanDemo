@@ -40,12 +40,12 @@
         <activity android:name=".View.MainActivity" />
         <activity android:name=".View.Main2Activity" />
         <activity android:name=".activity.SearchActivity" />
-        <activity android:name=".activity.PlayVideoActivity"></activity>
+        <activity android:name=".activity.PlayVideoActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="" >
-        </meta-data>
+            android:value="" />
+
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -74,16 +74,24 @@
             android:name="com.umeng.socialize.editorpage.ShareActivity"
             android:excludeFromRecents="true"
             android:theme="@style/Theme.UMDefault" />
-        <activity android:name=".activity.SameCityPlayVideoActivity"></activity>
-            android:theme="@style/Theme.UMDefault" />
-        <activity android:name=".activity.PhoneLogin_Activity"></activity>
+        <activity android:name=".activity.SameCityPlayVideoActivity" />
+        android:theme="@style/Theme.UMDefault" />
+        <activity android:name=".activity.PhoneLogin_Activity" />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:windowSoftInputMode="stateHidden|adjustResize" />
-        <meta-data android:name="Mob-AppKey" android:value="101732155b605"/>
-        <meta-data android:name="Mob-AppSecret" android:value="69d1850f4b74100266ab576b64e6cb16"/>
+
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="101732155b605" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="69d1850f4b74100266ab576b64e6cb16" />
+
+        <activity android:name=".activity.CompileActivity" />
+        <activity android:name=".activity.Setting_Activity"></activity>
     </application>
 
 </manifest>

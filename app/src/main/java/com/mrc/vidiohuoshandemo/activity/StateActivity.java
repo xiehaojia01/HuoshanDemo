@@ -31,7 +31,7 @@ public class StateActivity extends AppCompatActivity {
             public void run() {
                 redirectTo();
             }
-        }, 1000);//3秒后跳转
+        }, 1000);//1秒后跳转
 
 
 
