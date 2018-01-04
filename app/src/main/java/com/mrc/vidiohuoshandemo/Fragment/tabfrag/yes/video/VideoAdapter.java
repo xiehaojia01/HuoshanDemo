@@ -24,6 +24,9 @@ public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         this.list = list;
         this.context = context;
     }
+
+
+
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.listener = listener;
     }

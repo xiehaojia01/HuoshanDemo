@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/sf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.mrc.vidiohuoshandemo.util.ObservableScrollView
+            android:id="@+id/scro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#F5F5F5"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/br_live"
+                    android:layout_width="match_parent"
+                    android:layout_height="320px"
+                    android:background="#FFFFFF"></com.youth.banner.Banner>
+                <com.mrc.vidiohuoshandemo.util.MarqueeView
+                    android:id="@+id/marqueeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"
+                    app:mvAnimDuration="500"
+                    app:mvInterval="3000"
+                    app:mvTextSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#DDDDDD" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px"
+                    android:layout_marginTop="10px"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:gravity="center"
+                        android:src="@mipmap/aaw" />
+
+                    <TextView
+                        android:layout_width="640px"
+                        android:layout_height="50px"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="正在直播中"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/Rv_bt"
+                        android:layout_width="40px"
+                        android:layout_height="40px"
+                        android:gravity="center_vertical"
+                        android:src="@mipmap/a6e" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </com.mrc.vidiohuoshandemo.util.ObservableScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
