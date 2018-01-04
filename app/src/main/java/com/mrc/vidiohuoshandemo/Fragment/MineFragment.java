@@ -1,5 +1,7 @@
 package com.mrc.vidiohuoshandemo.Fragment;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,6 +29,7 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     private ImageView mFenxing;
     private ImageView mShezhi;
     private RecyclerView mRecyclerView1;
+    private SharedPreferences islogin;
 
     @Nullable
     @Override
@@ -45,6 +48,9 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         mShezhi = (ImageView) view.findViewById(R.id.shezhi);
         mShezhi.setOnClickListener(this);
         mRecyclerView1 = (RecyclerView) view.findViewById(R.id.recyclerView1);
+        islogin = getContext().getSharedPreferences("counter", Context.MODE_PRIVATE);
+        String name = islogin.getString("name","");
+        mWodeTitlename.setText(name);
     }
 
     @Override

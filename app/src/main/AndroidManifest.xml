@@ -24,6 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".View.Main2Activity">
+        <activity android:name=".activity.StateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,6 +41,8 @@
 
         <activity android:name=".activity.StateActivity" />
         <activity android:name=".View.MainActivity" />
+        <activity android:name=".View.MainActivity" />
+        <activity android:name=".View.Main2Activity" />
         <activity android:name=".activity.SearchActivity" />
         <activity android:name=".activity.PlayVideoActivity"></activity>
         <activity android:name=".activity.WebActivity"></activity>
