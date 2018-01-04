@@ -17,7 +17,6 @@ public class SameCityPlayVideoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_same_city_play_video);
         initView();
 
-
     }
 
     private void initView() {

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sdv"
+        android:layout_width="match_parent"
+        android:layout_height="450px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:placeholderImage="@mipmap/a77" />
+
+    <ImageView
+        android:id="@+id/tv"
+        android:layout_width="90px"
+        android:layout_height="40px"
+        android:layout_marginRight="15px"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@mipmap/a5i"
+        android:layout_alignTop="@+id/tv_1" />
+    <ImageView
+        android:id="@+id/tv_1"
+        android:layout_marginTop="60px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sdv"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="invisible"
+        android:textColor="#fcfcfc"/>
+    <TextView
+        android:layout_marginTop="60px"
+        android:id="@+id/live_title"
+        android:layout_width="wrap_content"
+        android:layout_height="30px"
+        android:layout_marginBottom="15px"
+        android:layout_marginRight="20px"
+        android:layout_alignRight="@+id/sdv"
+        android:layout_alignBottom="@+id/sdv"
+        android:textSize="15sp"
+        android:text="111"
+        android:textColor="#fcfcfc"
+        />
+    <ImageView
+        android:id="@+id/im"
+        android:layout_width="25px"
+        android:layout_height="25px"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="15px"
+        android:layout_alignBottom="@+id/sdv"
+        android:src="@mipmap/ad2"
+        android:background="#00000000"
+        android:textColor="#fcfcfc"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30px"
+        android:textSize="15sp"
+        android:text="111"
+        android:layout_above="@+id/im"
+        android:layout_marginBottom="10px"
+        android:layout_marginLeft="60px"
+        android:textColor="#fcfcfc"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30px"
+        android:layout_alignBottom="@+id/sdv"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="10px"
+        android:textSize="15sp"
+        android:text="111"
+        android:layout_toRightOf="@+id/im"
+        android:textColor="#fcfcfc"
+        />
+    <TextView
+        android:layout_below="@+id/sdv"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
+</RelativeLayout>

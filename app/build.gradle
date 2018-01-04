@@ -55,6 +55,8 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     //ijkPlayer
     compile 'com.github.leifzhang:IjkLib:0.4.4'
+    //glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
     compile 'com.zhy:autolayout:1.4.5'
     compile 'org.greenrobot:eventbus:3.1.1'
@@ -64,5 +66,6 @@ dependencies {
     implementation files('libs/MobCommons-2017.0607.1736.jar')
     implementation files('libs/MobTools-2017.0607.1736.jar')
     compile 'com.youth.banner:banner:1.4.9'
-
+    //SmartRefreshLayout
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
 }
