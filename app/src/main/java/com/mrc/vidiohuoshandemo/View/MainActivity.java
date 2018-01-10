@@ -23,12 +23,12 @@ import android.widget.Toast;
 
 import com.mrc.vidiohuoshandemo.Adapter.PagerAdapter.MyViewPagerAdapter;
 import com.mrc.vidiohuoshandemo.App.APP;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live.LiveFragment;
+import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.search.SearchActivity;
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.Video_Fragment;
 import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.PhoneLogin_Activity;
-import com.mrc.vidiohuoshandemo.activity.SearchActivity;
 import com.mrc.vidiohuoshandemo.common.BaseActivity;
-import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live.LiveFragment;
 import com.mrc.vidiohuoshandemo.util.FirstEvent;
 import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
@@ -62,8 +62,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private LinearLayout mLayouHide;
     private SharedPreferences login;
     private SharedPreferences.Editor islogin;
-
-
+   //AtivityThread=主线程
+//    HandlerThread
+// IntentService
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

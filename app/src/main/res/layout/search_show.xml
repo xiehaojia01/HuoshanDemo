@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/main_simple_drawee_view"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            fresco:roundAsCircle="true"
+            />
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/search_name"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:text="xxxxxx"
+                />
+            <TextView
+                android:id="@+id/search_title"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:text="ssssss"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/concern"
+             android:layout_marginLeft="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="关注"
+            android:background="@drawable/search_bg"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/search_square_phoneone"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            fresco:placeholderImage="@mipmap/ic_launcher" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/search_square_phonetwo"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            fresco:placeholderImage="@mipmap/ic_launcher" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_marginLeft="8dp"
+            android:id="@+id/search_square_phonethree"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            fresco:placeholderImage="@mipmap/ic_launcher" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,9 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.mrc.vidiohuoshandemo.activity.SearchActivity">
+    android:layout_height="wrap_content">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+
+        android:fitsSystemWindows="true"
+        android:id="@+id/ll_nest_toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.Toolbar
+            android:fitsSystemWindows="true"
+            android:id="@+id/tool_head"
+            android:layout_height="?android:actionBarSize"
+            android:layout_width="match_parent">
+            <LinearLayout
+
+                android:id="@+id/ll_head"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <LinearLayout
+                    android:padding="5dp"
+                    android:background="@drawable/search_bg"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="30dp">
+                    <ImageView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search_icon2"
+                        />
+                    <EditText
+                        android:id="@+id/et_name"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        android:layout_width="0dp"
+                        android:textSize="12sp"
+                        android:background="@null"
+                        android:layout_height="wrap_content"
+                        android:hint="搜索用户名或者火山号" />
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/ll_msg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp">
+                    <TextView
+                        android:id="@+id/tv_msg"
+                        android:textSize="15dp"
+                        android:paddingTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="取消" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </LinearLayout>
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         >
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="horizontal"
+             >
+             <ImageView
+                 android:layout_marginLeft="20dp"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:src="@drawable/sousuo_03"
+                 />
+             <TextView
+                 android:id="@+id/pleaseFriend"
+                 android:layout_marginLeft="8dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="16dp"
+                 android:text="邀请好友"
+                 />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="horizontal"
+             >
+             <ImageView
+                 android:layout_marginLeft="20dp"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:src="@drawable/sousuo_05"
+                 />
+             <TextView
+                 android:id="@+id/QRcode"
+                 android:layout_marginLeft="8dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="16dp"
+                 android:text="我的二维码"
+                 />
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:orientation="horizontal"
+             >
+             <ImageView
+                 android:layout_marginLeft="20dp"
+                 android:layout_width="20dp"
+                 android:layout_height="20dp"
+                 android:src="@drawable/sousuo_07"
+                 />
+             <TextView
+                 android:id="@+id/Scan"
+                 android:layout_marginLeft="8dp"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textSize="16dp"
+                 android:text="扫一扫"
+                 />
+         </LinearLayout>
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="13dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/search_bg"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建议"
+            android:textSize="14dp"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/search_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/search_bg"
+        />
+    <LinearLayout
+        android:id="@+id/search_phone"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <ImageView
+
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/sousuo_13"
+            />
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:textSize="16dp"
+            android:text="手机通讯录"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/search_bg"
+        />
+    <com.mrc.vidiohuoshandemo.util.ObservableScrollView
+        android:id="@+id/scro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/search_rvtwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+           />
+    </com.mrc.vidiohuoshandemo.util.ObservableScrollView>
+</LinearLayout>

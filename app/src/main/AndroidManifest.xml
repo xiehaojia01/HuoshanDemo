@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mrc.vidiohuoshandemo">
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -15,7 +19,6 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
-
         android:name=".App.APP"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,7 +26,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".View.Main2Activity">
         <activity android:name=".activity.StateActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,15 +41,12 @@
             android:name="design_height"
             android:value="1280" />
 
-        <activity android:name=".activity.StateActivity" />
-        <activity android:name=".View.MainActivity" />
         <activity android:name=".View.MainActivity" />
         <activity android:name=".View.Main2Activity" />
-        <activity android:name=".activity.SearchActivity" />
+        <activity android:name=".Fragment.tabfrag.yes.search.SearchActivity" />
         <activity android:name=".activity.PlayVideoActivity" />
-        <activity android:name=".activity.PlayVideoActivity"></activity>
-        <activity android:name=".activity.WebActivity"></activity>
-        <activity android:name=".activity.LivePlayActivity"></activity>
+        <activity android:name=".activity.WebActivity" />
+        <activity android:name=".activity.LivePlayActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"
@@ -98,7 +97,11 @@
             android:value="69d1850f4b74100266ab576b64e6cb16" />
 
         <activity android:name=".activity.CompileActivity" />
-        <activity android:name=".activity.Setting_Activity"></activity>
+        <activity android:name=".activity.Setting_Activity" />
+        <activity android:name=".activity.AddressList" />
+        <activity android:name=".activity.ScanActivity" />
+        <activity android:name=".activity.QRcodeActivity" />
+        <activity android:name=".activity.PleaseFriendActivity"></activity>
     </application>
 
 </manifest>

@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.PlayVideoActivity;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
 
@@ -26,12 +30,16 @@ public class Video_Fragment extends Fragment implements Video_view{
     private RecyclerView rv;
     private List<VideoBean_Sp.DataBeanX> list;
     private VideoAdapter adapter;
+    private SmartRefreshLayout videosf;
+     VideoPresenter presenter;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getActivity(),R.layout.video_fragment,null);
         rv=view.findViewById(R.id.rv);
-        VideoPresenter presenter=new VideoPresenter(this);
+        //刷新
+        initSmartRefreshLayout(view);
+        presenter=new VideoPresenter(this);
         presenter.videoP();
         rv.setLayoutManager(new GridLayoutManager(getActivity(),2));
         rv.addItemDecoration(new RecyclerView.ItemDecoration() {
@@ -42,7 +50,24 @@ public class Video_Fragment extends Fragment implements Video_view{
         });
         return view;
     }
+    private void initSmartRefreshLayout(View view) {
+        videosf=view.findViewById(R.id.videosf);
+        videosf.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshlayout.finishRefresh(2000);
+                presenter.videoP();
+            }
+        });
+        videosf.setOnLoadmoreListener(new OnLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadmore(2000);
+                presenter.videoP();
+            }
+        });
 
+    }
     @Override
     public void videoBean(final VideoBean_Sp videoBean) {
         Log.i("bean",videoBean.toString());
@@ -60,4 +85,5 @@ public class Video_Fragment extends Fragment implements Video_view{
             }
         });
     }
+
 }

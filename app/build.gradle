@@ -68,4 +68,5 @@ dependencies {
     compile 'com.youth.banner:banner:1.4.9'
     //SmartRefreshLayout
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.github.open-android:Zxing:v1.0.3'
 }

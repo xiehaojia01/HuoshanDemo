@@ -17,6 +17,10 @@ import android.widget.Toast;
 import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.VideoAdapter;
 import com.mrc.vidiohuoshandemo.R;
 import com.mrc.vidiohuoshandemo.activity.SameCityPlayVideoActivity;
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+import com.scwang.smartrefresh.layout.api.RefreshLayout;
+import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
+import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
 
@@ -28,12 +32,17 @@ public class TheSameCity_fragment extends Fragment implements SameCity_view {
     private RecyclerView rv;
     private List<SameCityBean.DataBeanX> list;
     private SameCityAdapter sameCityAdapter;
+    private SmartRefreshLayout thesamesf;
+    private  SameCityPresenter presenter;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = View.inflate(getActivity(),R.layout.thesamecity_fragment,null);
         rv=view.findViewById(R.id.rv);
-        SameCityPresenter presenter=new SameCityPresenter(this);
+        //刷新
+        initSmartRefreshLayout(view);
+        presenter=new SameCityPresenter(this);
         presenter.sameCityP();
         //设置layoutManager
 
@@ -47,6 +56,26 @@ public class TheSameCity_fragment extends Fragment implements SameCity_view {
         });
         return view;
     }
+
+    private void initSmartRefreshLayout(View view) {
+        thesamesf=view.findViewById(R.id.thesamesf);
+        thesamesf.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshlayout) {
+                refreshlayout.finishRefresh(2000);
+                presenter.sameCityP();
+            }
+        });
+        thesamesf.setOnLoadmoreListener(new OnLoadmoreListener() {
+            @Override
+            public void onLoadmore(RefreshLayout refreshlayout) {
+                refreshlayout.finishLoadmore(2000);
+                presenter.sameCityP();
+            }
+        });
+
+    }
+
 
     @Override
     public void sameCityBean(final SameCityBean sameCityBean) {

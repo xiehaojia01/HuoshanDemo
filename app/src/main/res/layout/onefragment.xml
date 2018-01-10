@@ -61,7 +61,7 @@
                         android:src="@mipmap/aaw" />
 
                     <TextView
-                        android:layout_width="640px"
+                        android:layout_width="460px"
                         android:layout_height="50px"
                         android:layout_marginLeft="5dp"
                         android:gravity="center_vertical"
@@ -70,6 +70,7 @@
 
                     <ImageView
                         android:id="@+id/Rv_bt"
+                        android:layout_marginLeft="30dp"
                         android:layout_width="40px"
                         android:layout_height="40px"
                         android:gravity="center_vertical"

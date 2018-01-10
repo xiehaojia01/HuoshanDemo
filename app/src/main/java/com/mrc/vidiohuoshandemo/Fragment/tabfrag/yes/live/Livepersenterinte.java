@@ -5,6 +5,7 @@ package com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.live;
  */
 
 public class Livepersenterinte implements Livepersente,LiveFinishListener {
+    //接口
     Liveview liveview;
     private final Livemodeliste livemodeliste;
 
