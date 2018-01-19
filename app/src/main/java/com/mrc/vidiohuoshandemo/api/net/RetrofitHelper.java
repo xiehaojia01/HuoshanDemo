@@ -15,10 +15,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static com.mrc.vidiohuoshandemo.api.HsConstants.API_HOST;
 
-/**
- * Created by 杨群 on 2017/12/29.
- */
-
 public class RetrofitHelper {
     private static Retrofit retrofit;
     static{

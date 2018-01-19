@@ -12,10 +12,6 @@ import com.mrc.vidiohuoshandemo.R;
 
 import java.util.List;
 
-/**
- * Created by 杨群 on 2018/1/1.
- */
-
 public class VideoAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     List<VideoBean_Sp.DataBeanX> list;
     Context context;

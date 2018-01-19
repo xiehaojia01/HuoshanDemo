@@ -24,9 +24,6 @@ import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
 import java.util.List;
 
-/**
- * Created by Mr.c on 2017/12/29.
- */
 //同城的fragment
 public class TheSameCity_fragment extends Fragment implements SameCity_view {
     private RecyclerView rv;

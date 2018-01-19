@@ -2,9 +2,6 @@ package com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.thesamecity;
 
 import java.util.List;
 
-/**
- * Created by 杨群 on 2018/1/2.
- */
 
 public class SameCityBean {
 

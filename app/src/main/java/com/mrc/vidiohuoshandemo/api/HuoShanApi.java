@@ -13,10 +13,6 @@ import retrofit2.http.Headers;
 import static com.mrc.vidiohuoshandemo.api.HsConstants.HUOSHAN_DOMAIN_NAME;
 import static me.jessyan.retrofiturlmanager.RetrofitUrlManager.DOMAIN_NAME_HEADER;
 
-/**
- * Created by 杨群 on 2017/12/29.
- */
-
 public interface HuoShanApi {
     //header头部名称+火山的名称
 //header头部名称+火山的名称

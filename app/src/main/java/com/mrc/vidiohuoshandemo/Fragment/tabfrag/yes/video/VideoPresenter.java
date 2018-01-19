@@ -2,10 +2,6 @@ package com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video;
 
 import com.mrc.vidiohuoshandemo.util.OnNetLinsenter;
 
-/**
- * Created by 杨群 on 2017/12/30.
- */
-
 public class VideoPresenter {
     private IVidelModel model;
     private Video_view view;

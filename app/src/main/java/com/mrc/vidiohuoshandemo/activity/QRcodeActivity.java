@@ -43,7 +43,7 @@ public class QRcodeActivity extends AppCompatActivity implements View.OnClickLis
         switch (view.getId()) {
             case R.id.btn_create :
                 //生成二维码
-                String content = "杨群";
+                String content = "解浩佳";
                 Bitmap bitmap = null;
                 try {
                     bitmap = BitmapUtils.create2DCode(content);

@@ -14,10 +14,6 @@ import com.mrc.vidiohuoshandemo.R;
 
 import java.util.List;
 
-/**
- * Created by 杨群 on 2018/1/8.
- */
-
 public class SearchShowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     List<SearchBean.DataBean.RecommendUserBean> list;
     Context context;

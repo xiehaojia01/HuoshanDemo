@@ -10,9 +10,6 @@ import com.mrc.vidiohuoshandemo.entity.Splash;
 
 import io.reactivex.functions.Consumer;
 
-/**
- * Created by 杨群 on 2017/12/29.
- */
 
 public class HomeLivePresenter implements HomeLiveContract.Presenter {
     private HomeLiveContract.View liveView;

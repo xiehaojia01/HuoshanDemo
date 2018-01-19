@@ -64,7 +64,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private SharedPreferences.Editor islogin;
    //AtivityThread=主线程
 //    HandlerThread
-// IntentService
+ //IntentService
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

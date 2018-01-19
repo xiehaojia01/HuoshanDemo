@@ -14,10 +14,6 @@ import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 import static com.mrc.vidiohuoshandemo.api.HsConstants.APP_HUOSHAN_DOMAIN;
 import static com.mrc.vidiohuoshandemo.api.HsConstants.HUOSHAN_DOMAIN_NAME;
 
-/**
- * Created by 杨群 on 2017/12/29.
- */
-
 public class APP extends Application{
     public static APP app;
 

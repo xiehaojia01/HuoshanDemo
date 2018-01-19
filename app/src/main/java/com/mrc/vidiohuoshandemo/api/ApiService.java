@@ -8,10 +8,6 @@ import com.mrc.vidiohuoshandemo.Fragment.tabfrag.yes.video.VideoBean_Sp;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 
-/**
- * Created by 杨群 on 2017/12/30.
- */
-
 public interface ApiService {
 //    @GET("hotsoon/feed/?type=live")
 //    Observable<Livebean> getNoParams();

@@ -12,9 +12,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by 杨群 on 2017/12/30.
- */
 
 public class VideoModel implements IVidelModel {
 
